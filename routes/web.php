@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//code session 1
 Route::get('/greeting',function(){
     return 'Hello world';
 })->name('greeting'); //name of route
