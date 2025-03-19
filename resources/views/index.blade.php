@@ -22,7 +22,7 @@
                 <tr>
                 <!--Phan tu cua 1 list -->
                     <td>{{$task->id}}</td>
-                    <td>{{$task->name}}</td>
+                    <td>{{$task->title}}</td>
                     {{-- <td>{{$task->description}}</td>
                     <td>{{$task->long_description}}</td> --}}
                     <td>{{$task->completed==true?"Completed":"Uncompleted"}}</td>
