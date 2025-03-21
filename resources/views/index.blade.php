@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>To Do App</h1>
+@extends('layouts.app')
+@section('title', 'To Do App')
+@section('content')
     <table>
         <tr>
             <th>ID</th>
@@ -35,8 +28,4 @@
                 </tr>
             @endif
     </table>
-    @isset($name)
-        <h1>I'm {{$name}}</h1>
-    @endisset
-</body>
-</html>
+@endsection
