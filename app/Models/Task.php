@@ -9,4 +9,5 @@ class Task extends Model
 {
     //
     use HasFactory;
+    public $fillable= ['title', 'description', 'long_description', 'completed'];
 }
