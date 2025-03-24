@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'To Do App')
 @section('content')
+    <a href="{{ route('tasks.create')}}">+ Create Task</a>
     <table>
         <tr>
             <th>ID</th>
@@ -19,7 +20,14 @@
                     {{-- <td>{{$task->description}}</td>
                     <td>{{$task->long_description}}</td> --}}
                     <td>{{$task->completed==true?"Completed":"Uncompleted"}}</td>
-                    <td><a href="{{route('tasks.detail',['id'=>$task->id])}}">Detail</td>
+                    <td><a href="{{route('tasks.detail',['id'=>$task->id])}}">Detail</a>
+                    <a href="{{route('tasks.edit',['id'=>$task->id])}}">Edit</a>
+                    <form action="{{route('tasks.delete',['id'=>$task->id])}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
                 </tr>
                 @endforeach
             @else
