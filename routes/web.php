@@ -31,7 +31,7 @@ Route::post('tasks/', function(Request $request){
     $task->long_description = $data['long_description'];
     $task->completed = false; //set default value = false
     $task->save();
-    return redirect()->route('tasks.index');
+    return redirect()->route('tasks.index')->with('success', "Task created succesfully");
 })->name('tasks.create');
 
 // Route::get('/about', function(){
